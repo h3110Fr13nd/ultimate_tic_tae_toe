@@ -78,7 +78,9 @@ class _TicTacToeHomePageState extends State<TicTacToeHomePage> {
                         width: 2,
                         color: Colors.black45,
                         style: BorderStyle.solid)),
-                child: ListView.builder(
+                child:SizedBox(
+                    height: 200,
+                    child:ListView.builder(
                     itemCount: 4,
                     itemBuilder: (context, index) {
                       var txt = [
@@ -96,7 +98,7 @@ class _TicTacToeHomePageState extends State<TicTacToeHomePage> {
                       ];
 
                       if (index == 0) {
-                        return const Center(
+                        return Column(children:const [Center(
                             child: Text(
                               "Playing Mode",
                               style: TextStyle(
@@ -104,7 +106,7 @@ class _TicTacToeHomePageState extends State<TicTacToeHomePage> {
                                 fontSize: 30,
                                 color: Colors.yellow,
                               ),
-                            ));
+                            )),Divider(thickness: 50,height: 50,color: Colors.transparent,)]);
                       }
 
                       return Column(
@@ -116,8 +118,8 @@ class _TicTacToeHomePageState extends State<TicTacToeHomePage> {
                                   builder: (context) => onPresses[index]));
                         },
                         child: Text(txt[index]),
-                      ),const Divider(height: 50,)]);
-                    }))));
+                      ),const Divider(thickness: 40,height:40,color: Colors.transparent,)]);
+                    })))));
   }
 }
 
