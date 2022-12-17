@@ -116,7 +116,7 @@ class _TicTacToeHomePageState extends State<TicTacToeHomePage> {
                                   builder: (context) => onPresses[index]));
                         },
                         child: Text(txt[index]),
-                      ),const Divider(height: 4,)]);
+                      ),const Divider(height: 50,)]);
                     }))));
   }
 }
