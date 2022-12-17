@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 void main() {
   runApp(const MyApp());
 }
@@ -226,7 +226,7 @@ class _BoardState extends State<Board> {
           listEquals([lst[0][i], lst[1][i], lst[2][i]], ['O', 'O', 'O']) ||
           listEquals([lst[0][0], lst[1][1], lst[2][2]], ['O', 'O', 'O']) ||
           listEquals([lst[0][2], lst[1][1], lst[2][0]], ['O', 'O', 'O'])) {
-        //print("OOOOOOOOOOOOOOOOO");
+
         return 'O';
       } else if (listEquals(lst[i], ['X', 'X', 'X']) ||
           listEquals([lst[0][i], lst[1][i], lst[2][i]], ['X', 'X', 'X']) ||
@@ -376,7 +376,7 @@ class _BoardState extends State<Board> {
                     child: Stack(children: [
                       Container(
                         width: 200,
-                        constraints: BoxConstraints(maxWidth: 150,),
+                        constraints: const BoxConstraints(maxWidth: 150,),
                         decoration: BoxDecoration(
                           color: (winListOuter[indexout ~/ 3]
                           [indexout % 3] !=
