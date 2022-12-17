@@ -107,7 +107,8 @@ class _TicTacToeHomePageState extends State<TicTacToeHomePage> {
                             ));
                       }
 
-                      return ElevatedButton(
+                      return Column(
+                          children:[ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                               context,
@@ -115,7 +116,7 @@ class _TicTacToeHomePageState extends State<TicTacToeHomePage> {
                                   builder: (context) => onPresses[index]));
                         },
                         child: Text(txt[index]),
-                      );
+                      ),const Divider(height: 4,)]);
                     }))));
   }
 }
